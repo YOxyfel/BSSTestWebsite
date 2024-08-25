@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://yoxyfel.github.io/Page-Landing/background1.png'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            opacity: 0.5; /* 50% opacity */
+        }
+
+nav {
+    width: 100vw;
+    height: 100px;
+    background-color: #FACC15;
+    display: flex;
+    flex-direction: row;
+  position: fixed;
+}
+
+.left-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    position: relative; /* Set position relative to contain the absolute menu */
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    background-color: white;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  margin-left: 50px;
+    border-radius: 10px;
+    border: #E4E4E7 2px solid;
+}
+
+.line {
+    height: 5px;
+    width: 30px;
+    background-color: #DCDCDC;
+    margin: auto auto;
+    border-radius: 10px;
+    border: #AEAEAE 2px solid;
+}
+
+.menu {
+    height: auto; /* Set height to auto for the menu */
+    background-color: white;
+    width: 70px; /* Fixed width for the menu */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: #E4E4E7 2px solid;
+    position: absolute; /* Position the menu absolutely */
+    top: 48px; /* Position it right below the hamburger menu */
+    left: 0; /* Align to the left of the parent */
+    display: none; /* Initially hide the menu */
+}
+
+.menu.active {
+    display: flex; /* Show the menu when active */
+}
+
+.menu > ul {
+    list-style: none;
+}
+
+.menu > ul li {
+    padding: 5px 0;
+  cursor:pointer;
+}
+
+.middle-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle-nav img {
+    height:60px;
+    width: 130px;
+}
+
+nav > * {
+    flex: 1 0 33%;
+}
+
+.right-nav
+{
+  & input
+  {
+    height: 25px;
+    width: 150px;
+  }
+  & button
+  {
+    margin-right: 50px;
+    height: 25px;
+    width: 50px;
+  }
+}
+
+.right-nav
+{
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:end;
+}
+
+.right-nav button
+{
+  cursor:pointer;
+}
+
+main
+{
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  height: 100%;
+}
+.fake-nav
+{
+  flex: 1 0 12%;
+}
+.buttons
+{
+  flex: 1 0 26%;
+}
+.the-rest
+{
+  flex: 1 0 47%;
+}
+.footer
+{
+  flex: 1 0 15%;
+}
+
+.buttons
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.buttons > button
+{
+  width: 250px;
+  height: 75px;
+  border-radius: 25px;
+  border: none;
+  background-color: #F97316;
+  cursor:pointer;
+  
+}
+.buttons > button:hover
+{
+  background-color: #E45E00;
+}
+
+.buttons > iframe
+{
+  width:300px;
+  height:230px;
+  border-radius: 25px;
+}
+
+.buttons > button > p
+{
+  font-size: 20px;
+  color:white;
+  font-weight: bold;
+}
+
+.the-rest
+{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  gap: 1rem;
+  width: inherit;
+  height:10%;
+}
+
+.left-box, .right-box
+{
+  width: 30%;
+  height: 90%;
+   border-radius: 15px;
+  background-image: linear-gradient(to bottom, #86EFAC, #25944E);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+
+}
+
+.stickers-part
+{
+  height:85%;
+}
+.layouts
+{
+  height:15%;
+  display:flex;
+  width:70%;
+  height:100%;
+  flex-direction: row;
+  justify-content:start;
+  align-items:center;
+}
+
+.box
+{
+  background-color: white;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight: bold;
+  font-size: 25px;
+  cursor:pointer;
+  border: 2px solid #E4E4E7;
+}
+
+.box:hover
+{
+  color:white;
+  background-color:#ACEFAC;
+}
+
+.box-container
+{
+  display:flex;
+  gap: 1rem;
+  margin-left: 50px;
+}
+
+div.right-box
+{
+  & .layouts
+  {
+    justify-content:end;
+  }
+  & .box-container
+  {
+    margin-right: 50px;
+  }
+}
+
+.value
+{
+  height:15%;
+  display:flex;
+  width:30%;
+  height:100%;
+}
+
+.layouts-value
+{
+  display:flex;
+  flex-direction: row;
+  height:15%;
+}
+.middle-box
+{
+  width: 28%;
+  height: 90%;
+  background-color:white;
+  border-radius: 15px;
+  display:flex;
+  flex-direction:column;
+}
+.footer
+{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:inherit;
+  width: inherit;
+}
+
+.value
+{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.x-square
+{
+  background-color: #D9D9D9;
+}
+
+.value-background p
+{
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.value-background
+{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  background-color:#77D89B;
+  width: 150px;
+  height: 60px;
+  border-radius: 20px;
+}
+
+.search-bar
+{
+  padding-left: 15px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 1px black solid;
+  & input
+  {
+    font-weight:bold;
+    width: 60%;
+    border: 2px solid #EAEAED;
+    border-radius: 5px;
+  }
+  
+  & button
+  {
+    background-color:white;
+    font-weight:bold;
+    cursor:pointer;
+    width: 15%;
+    border: 2px solid #EAEAED;
+    border-radius: 5px;
+  }
+  
+  > button:hover
+    {
+      background-color:#E2E2E2;
+  }
+  
+  height: 10%;
+}
+
+.result
+{
+  height: 75%;
+}
+
+.options
+{
+  border-top: 1px solid black;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  
+  & > button:hover
+    {
+      background-color: #E2E2E2;
+  }
+  
+  & button
+  {
+    background-color:white;
+    width: 100px;
+    height: 40px;
+    border: 2px solid #EAEAED;
+    border-radius:10px;
+  }
+  
+  & input
+  {
+    cursor:pointer;
+    width: 25px;
+    height: 25px;
+  }
+  
+  height:15%;
+}
+
+.button-left
+{
+  margin-left: 20px;
+  cursor:pointer;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/017/785/206/original/left-arrow-icon-on-transparent-background-free-png.png');
+  background-size: 50px 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.button-right
+{
+  cursor:pointer;
+  margin-right: 20px;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/017/785/077/original/right-arrow-icon-on-transparent-background-free-png.png');
+  background-size: 50px 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.chat
+{
+    background-image:url('chatPic.png');
+    background-size: 170px 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+button.chat
+{
+    width: 150px;
+    height: 150px;
+    border:none;
+    background-color: transparent;
+    cursor:pointer;
+}
