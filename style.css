@@ -161,19 +161,15 @@ main
 
 .fake-nav
 {
-  flex: 1 0 12%;
+  flex: 1 0 10%;
 }
 .buttons
 {
-  flex: 1 0 26%;
+  flex: 1 0 25%;
 }
 .the-rest
 {
-  flex: 1 0 47%;
-}
-.footer
-{
-  flex: 1 0 15%;
+  flex: 1 0 65%;
 }
 
 /* BUTTONS */
@@ -398,6 +394,32 @@ div.right-box
 .result
 {
   height: 75%;
+}
+
+.footer
+{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 200px;
+}
+
+.the-rest
+{
+  
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: auto;
+  margin-bottom: 15px;
+  
+}
+
+.the-rest2
+{
+  display: none;
 }
 
 .options
