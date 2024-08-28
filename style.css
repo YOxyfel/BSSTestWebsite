@@ -112,11 +112,14 @@ nav > * {
 
 /* LOGO */
 
-.middle-nav img {
-  height:60px;
-  width: 130px;
+.middle-nav :nth-child(1) {
+  height:85px;
+  width: 120px;
 }
-
+.middle-nav :nth-child(2) {
+  height:20px;
+  width: 150px;
+}
 /* RIGHT NAV */
 
 .right-nav
@@ -497,13 +500,26 @@ button.chat
 /* Phone (portrait) */
 @media (max-width: 480px) {
   
+  .middle-nav :nth-child(1) {
+    height:65px;
+    width: 90px;
+  }
+  .middle-nav :nth-child(2) {
+    height:15px;
+    width: 130px;
+  }
+  .right-nav
+  {
+    display: none;
+  }
+  
   .the-rest
   {
     display: none !important;
   }
   .the-rest2
   {
-    margin-top: 120px;
+    margin-top: 20px;
     display:flex;
     flex-direction:column;
     justify-content: center;
@@ -516,7 +532,18 @@ button.chat
   .hamburger-menu
   {
     margin-left: 10px;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    gap: 0.2rem;
   }
+  .line
+  {
+    height: 1.5px;
+    width: 20px;
+
+  }
+
   .the-rest2 .right-box
   {
     display: none;
@@ -533,7 +560,7 @@ button.chat
   }
   .menu
   {
-    top: 73px;
+    top: 54px;
     left: 10px;
     width: auto;
     & ul li
@@ -552,7 +579,21 @@ button.chat
   nav
   {
     z-index: 5;
+    position: relative;
+    gap: 6rem;
+    height: 70px;
   }
+  .right-nav, .left-nav, .middle-nav
+  {
+    width: 50px !important;
+    flex: none;
+    
+  }
+  .middle-nav
+  {
+    width: 100px;
+  }
+
   .right-nav input
   {
     display: none;
